@@ -6,7 +6,7 @@ bool czyPierwsza(int n){
 	for (int i = 2; i * i <= n; i++) {
 		if (n % i == 0) return false;
 	}
-	return true;
+	return true
 
 }
 
@@ -22,7 +22,18 @@ int main() {
         cout << "MENU" << endl;
         cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
         cout << "0. Wyjscie" << endl;
+	cout << "1. Sprawdz czy liczba jest pierwssza" << endl;
         cin >> wyjscie;
+	if (wyjscie == 1) {
+		int liczba;
+		cout << "Podaj liczbe do sprawdzenia, czy pierwsza: ";
+		cin >> liczba;
+		if (czyPierwsza(liczba)){
+			cout << "liczba " << liczba << "jest pierwsza" << endl;
+		} else {
+			cout << "liczba" << liczba << " nie jest pierwsza " << endl;
+		}
+	}
     } while(wyjscie != 0);
     return 0;
 }
